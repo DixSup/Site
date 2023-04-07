@@ -1,0 +1,182 @@
+
+html{
+    min-width: 250px;
+    width: 100vw;
+}
+.header{
+    background: rgba(15, 126, 201, 0.534);
+    padding: 1%;
+    z-index: 100;
+    box-shadow: 0 5px 25px rgba(0,0,0,.015);
+    -webkit-box-shadow:  0 5px 25px rgba(0,0,0,.015);
+    height: 10%;
+    border-radius: 20px;
+    font-size:calc(18px + 2.2vw);
+    width: 98%;
+    height: 15vw;
+    text-align: center;
+    color: aliceblue;
+}
+.header_fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+body{
+    background: rgba(129, 241, 172,1);
+}
+.page{
+
+    margin: 0 5%;
+    margin-top: 3%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.pageContainer{
+    background: bisque;
+    justify-content: center;
+    border-radius: 12px;
+}
+.genInfo, .contactsContainer,.photoContainer{
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    font-size: calc(12px + 1vw);
+    gap: 3vw;
+}
+.genPhoto{
+    width: 50vw; 
+    min-width: 200;
+    height: auto;
+    max-height: 35vw;
+    border-radius: 10px;
+}
+.textInfo{
+    width: inherit;
+    max-width: 30vw;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+.locationContainer{
+    text-align: center;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    width: 30vw;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.location{
+    padding:3%;
+    width: inherit;
+    padding: 4%;
+    text-decoration: none;
+    color: black;    
+    font-size: calc(8px + 1vw);
+}
+.siteMenu{
+    margin-top: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+.siteMenu *{
+    text-decoration: none;
+    color: #fff ;
+    background: rgb(7, 102, 131);
+    margin-top: 1vh;
+    border-radius: 10px;
+}
+.siteMenu *:hover{
+    transform: scale(1.2);
+}
+.contactsContainer, .photoContainer, .aboutContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 85vw;
+    
+}
+.contactsHeader,.photoHeader, .aboutHeader{
+    margin-top: 1vw;
+    text-align: center;
+    background: rgb(7, 102, 131);
+    border-radius: 8px;
+    padding: 1vh;
+    color: #fff;
+    font-size: calc(8px + 1.5vw);
+}
+.social_img{
+    width: 5vw;
+    height: 5vw;
+}
+.contacts{
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    max-width: 100%;
+    justify-content: center;
+    gap: 3vw;
+}
+.contacts *{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    max-width: 10vw;
+}
+.contacts * a{
+    font-size: calc(6px + 1vw);
+    margin-top: 1.5vw;  
+    white-space: nowrap;
+}
+.photoList{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1vw;
+}
+.photoList *{
+    width: 50vw; 
+    min-width: 200;
+    height: auto;
+    max-height: 35vw;
+    border-radius: 10px;
+    
+}
+.telephone, .whatsapp{
+    margin-left: 0;
+    max-width: 40vw;
+}
+.telephone:hover, .whatsapp:hover{
+    transform: scale(1.3);
+}
+.photoList input{
+    padding: 1vw;
+    width: 4vw;
+    border: none;
+    font-size: calc(20px+ 1vw);
+    background-color: rgb(7, 102, 131);
+    color: #fff;
+    justify-content: center;
+}
+.photoList img:hover{
+    transform: scale(1.5);
+}
+.photoList img:focus{
+    transform: scale(1.5);
+}
+.photoList input:hover{
+    opacity: 0.7;
+}
+.about{
+    font-size: calc(8px + 1.3vw);
+    padding: 3%;
+    text-indent: 3vw;
+}
