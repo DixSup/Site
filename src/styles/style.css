@@ -126,7 +126,6 @@ body{
     display: flex;
     flex-direction: column;
     max-width: 85vw;
-    
 }
 .contactsHeader,.photoHeader, .aboutHeader{
     margin-top: 1vw;
@@ -214,4 +213,7 @@ body{
 .numbers{
     display: flex;
     flex-direction: row;
+}
+.aboutContainer{
+    padding: 1vw;
 }
