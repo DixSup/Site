@@ -9,10 +9,10 @@ html{
     z-index: 100;
     box-shadow: 0 5px 25px rgba(0,0,0,.015);
     -webkit-box-shadow:  0 5px 25px rgba(0,0,0,.015);
-    height: 10%;
     border-radius: 20px;
     width: 98%;
-    height: 15vw;
+    height: 10vw;
+    font-size: calc(16px + 2vw);
     text-align: center;
     color: aliceblue;
 }
@@ -28,12 +28,14 @@ html{
 .headerIn *:first-child{
     font-size: calc(8px + 1vw);
 }
-
+.header_fixed span{
+    padding: 1vw;
+}
 .header_fixed{
     position: fixed;
     left: 0;
     top: 0;
-    height: calc(48px + 2vw);
+    height: calc(54px + 3vw);
     font-size: calc(8px + 1vw);
     justify-self: center;
     text-align: center;
