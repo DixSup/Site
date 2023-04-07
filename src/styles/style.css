@@ -180,3 +180,8 @@ body{
     padding: 3%;
     text-indent: 3vw;
 }
+a[name] {
+    padding-top: 40px;
+    margin-top: -40px;
+    display: inline-block; /* required for webkit browsers */
+  }
