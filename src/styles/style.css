@@ -1,7 +1,4 @@
-html{
-    max-width: 1600px;
-    text-align: center;
-}
+
 .header{
     background: rgba(15, 126, 201, 0.534);
     padding: 1%;
@@ -47,10 +44,11 @@ html{
 }
 
 body{
+    text-align: center;
     background: rgba(129, 241, 172,1);
 }
 .page{
-
+    max-width: 1600px;
     margin: 0 5%;
     margin-top: 3%;
     box-sizing: border-box;
