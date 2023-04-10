@@ -5,9 +5,12 @@ const nextButtonPhoto = document.querySelector('.nextButton');
 const contact = document.querySelector(".contactsLink");
 const about = document.querySelector(".aboutLink");
 const photo = document.querySelector(".photoLink");
+const room = document.querySelector(".roomLink");
+
+const photoAsimage = document.querySelector(".photo1");
 
 let selectedPhoto = 1;
-let photoCount = 9;
+let photoCount = 7;
 
 window.addEventListener('scroll',()=>{
     if(this.scrollY > 0.1){
@@ -57,3 +60,43 @@ photo.addEventListener('click', () =>{
     behavior: 'smooth'
     });
 });
+room.addEventListener('click', ()=>{
+    let elem = document.querySelector(".roomContainer");
+    const y = elem.getBoundingClientRect().top - elem.getBoundingClientRect().height / 3;;
+    window.scroll({
+    top: y,
+    behavior: 'smooth'
+    });
+});
+
+photoAsimage.addEventListener('click', ()=>{
+    let imageContainer = document.createElement('div');
+    let body = document.body;
+    body.appendChild(imageContainer);
+    imageContainer.classList = "toPreview";
+    let buttonExitContainer = document.createElement('div');
+    buttonExitContainer.classList = "buttonExitContainer";
+    body.style.overflowY = "hidden";
+    imageContainer.appendChild(buttonExitContainer);
+
+    let exitButton = document.createElement('input');
+    exitButton.setAttribute('type','button');
+    exitButton.classList = "exitButton";
+    exitButton.value = "\u{274C}";
+    buttonExitContainer.appendChild(exitButton);
+
+    let img = photoAsimage.cloneNode(true);
+    let imageCont =document.createElement('div');
+    imageCont.classList = "imageContainer";
+    imageCont.appendChild(img);
+    
+    imageContainer.appendChild(imageCont);
+
+    
+    exitButton.addEventListener('click', ()=>{
+        body.removeChild(imageContainer);
+        body.style.overflowY = "visible";
+    });
+    
+});
+
