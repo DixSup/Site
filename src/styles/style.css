@@ -360,8 +360,9 @@ body{
     flex-direction: column;
     background-color: aliceblue;
     padding: 1vw;
-    max-width: 25vw;
+    max-width: 30vw;
     border-radius: 1vw;
+    min-width: 25vw;
 }
 .apartamentHeader{
     text-decoration: underline;
