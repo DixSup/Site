@@ -355,7 +355,7 @@ body{
     gap: 1vw;
 }
 .room {
-    font-size: calc(8px + 1vw);
+    font-size: calc(6px + 1vw);
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
@@ -386,7 +386,7 @@ body{
     display: block;
     width: fit-content;
     padding: 0.33vw;
-    font-size: calc(2px +  1vw);
+    font-size: calc(1px +  1vw);
     margin-top: 0.3vw;
 
     white-space: nowrap;
