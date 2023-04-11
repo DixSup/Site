@@ -386,7 +386,7 @@ body{
     display: block;
     width: fit-content;
     padding: 0.33vw;
-    font-size: calc(1px +  1vw);
+    font-size: calc(1px +  0.7vw);
     margin-top: 0.3vw;
 
     white-space: nowrap;
