@@ -385,12 +385,11 @@ body{
 .tagList div{
     margin-left: 0.3vw;
     display: block;
-    border:  thin solid black;
     width: fit-content;
-    border-radius: 1vw;
     padding: 0.33vw;
-    font-size: calc(8px + 0.1vw);
+    font-size: calc(2px +  1vw);
     margin-top: 0.3vw;
+    white-space: nowrap;
 }
 .tagList div img{
     width: 1.5vw;

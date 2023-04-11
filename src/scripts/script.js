@@ -18,6 +18,7 @@ const photoAsimage = document.querySelector(".photo1");
 let selectedPhoto = 1;
 let photoCount = 7;
 
+
 document.addEventListener('DOMContentLoaded', ()=>{
     let apartament = document.querySelector('.room:nth-child(1)');
     apartament.classList="room";
