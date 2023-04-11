@@ -223,9 +223,7 @@ body{
     font-size: calc(8px + 1vw);
     text-align: center;
 }
-.photoList img:hover{
-    transform: scale(1.5);
-}
+
 .nextButton:hover, .roomButtonNext:hover{
     animation: photoListButtonNext .4s linear forwards;
     -o-animation: photoListButtonNext .4s linear forwards;
@@ -389,7 +387,7 @@ body{
     padding: 0.33vw;
     font-size: calc(2px +  1vw);
     margin-top: 0.3vw;
-    
+
     white-space: nowrap;
 }
 .tagList div img{
