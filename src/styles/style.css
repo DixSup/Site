@@ -1,4 +1,9 @@
-
+.divxz{
+    width: 90%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .header{
     background: rgba(15, 126, 201, 0.534);
     padding: 1%;
@@ -48,8 +53,10 @@ body{
     background: rgba(129, 241, 172,1);
 }
 .page{
+    justify-content: center;
     max-width: 1600px;
-    margin: 0 5%;
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-top: 3%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -57,11 +64,21 @@ body{
 }
 .pageContainer{
     background: bisque;
-    justify-content: center;
     border-radius: 12px;
+    width: 99%; 
+    justify-content: center;
+    justify-items: center;
 }
-.genInfo, .contactsContainer,.photoContainer{
-    width: 100%;
+.pageContainer div{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.siteMenu a{
+    font-size: calc(8px + 1vw);
+    margin-right: 1vw;
+}
+.genInfo{
     display: flex;
     padding: 1%;
     font-size: calc(12px + 1vw);
@@ -73,6 +90,7 @@ body{
     height: auto;
     max-height: 35vw;
     border-radius: 10px;
+    vertical-align: middle;
 }
 .textInfo{
     width: inherit;
@@ -119,12 +137,15 @@ body{
 .siteMenu *:hover{
     transform: scale(1.2);
 }
-.contactsContainer, .photoContainer, .aboutContainer{
+.contactsContainer, .photoContainer, .aboutContainer, .roomContainer{
     display: flex;
     flex-direction: column;
-    max-width: 85vw;
+    max-width: 90vw;
 }
-.contactsHeader,.photoHeader, .aboutHeader, .roomHeader{
+.contactsContainer div, .photoContainer div, .aboutContainer div, .roomContainer div{
+    width: 100%;
+}
+.contactsHeader,.photoHeader, .aboutHeader,.roomHeader{
     margin-top: 1vw;
     text-align: center;
     background: rgb(7, 102, 131);
@@ -132,6 +153,8 @@ body{
     padding: 1vh;
     color: #fff;
     font-size: calc(8px + 1.5vw);
+    width: 100%;
+    margin-right: 1vw;
 }
 .social_img{
     width: 5vw;
@@ -156,6 +179,15 @@ body{
     margin-top: 1.5vw;  
     white-space: nowrap;
 }
+.photoContainer div{
+    margin-top: 1vw;
+}
+.photoContainer input{
+    margin: auto;
+    height: 4vw;
+    width: 4vw;
+    text-align: center;
+}
 .photoList{
     text-align: center;
     display: flex;
@@ -163,13 +195,12 @@ body{
     justify-content: center;
     gap: 1vw;
 }
-.photoList *{
+.photoList img{
     width: 50vw; 
     min-width: 200;
     height: auto;
     max-height: 35vw;
     border-radius: 10px;
-    
 }
 .telephone, .whatsapp{
     margin-left: 0;
@@ -185,19 +216,63 @@ body{
     transform: scale(1.3);
 }
 .photoList input{
-    padding: 1vw;
-    width: 4vw;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 4vw;
     border: none;
-    font-size: calc(20px+ 1vw);
-    background-color: rgb(7, 102, 131);
-    color: #fff;
-    justify-content: center;
+    font-size: calc(8px + 1vw);
+    text-align: center;
 }
 .photoList img:hover{
     transform: scale(1.5);
 }
-.photoList input:hover{
-    opacity: 0.7;
+.nextButton:hover, .roomButtonNext:hover{
+    animation: photoListButtonNext .4s linear forwards;
+    -o-animation: photoListButtonNext .4s linear forwards;
+    -moz-animation: photoListButtonNext .4s linear forwards;
+    -webkit-animation: photoListButtonNext .4s linear forwards; 
+}
+.backButton:hover, .roomButtonBack:hover{
+    animation: photoListButtonPrev .4s linear forwards;
+    -o-animation: photoListButtonPrev .4s linear forwards;
+    -moz-animation: photoListButtonPrev .4s linear forwards;
+    -webkit-animation: photoListButtonPrev .4s linear forwards; 
+}
+@keyframes photoListButtonPrev {
+    0%{
+        opacity: 0.2;
+        transform: rotate(-90deg);
+    }
+    25%{
+        opacity: 0.4;
+        transform: rotate(-180deg);
+    }
+    50%{
+        opacity: 0.6;
+        transform: rotate(-270deg);
+    }
+    100%{
+        opacity: 0.8;
+        transform: rotate(-360deg);
+    }
+}
+@keyframes photoListButtonNext {
+    0%{
+        opacity: 0.2;
+        transform: rotate(90deg);
+    }
+    25%{
+        opacity: 0.4;
+        transform: rotate(180deg);
+    }
+    50%{
+        opacity: 0.6;
+        transform: rotate(270deg);
+    }
+    100%{
+        opacity: 0.8;
+        transform: rotate(360deg);
+    }
 }
 .about{
     font-size: calc(8px + 1.3vw);
@@ -208,50 +283,8 @@ body{
     display: flex;
     flex-direction: row;
 }
-.aboutContainer{
+.aboutContainer,.roomContainer,.contactsContainer,.photoContainer{
     padding: 1vw;
-}
-.roomList{
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
-    padding: 1vw;
-}
-.room{
-    background: #fff;
-    padding: 1vw;
-    border-radius: 10px;
-}
-.room a{
-    color: blue;
-    text-decoration: underline;
-}
-.opacity img, .bed img{
-    width: 3vw;
-    vertical-align: middle;
-}
-.opacity, .bed {
-    font-size: calc(8px + 0.5vw);
-}
-.room:hover{
-    transform: scale(1.25);
-    box-shadow: 1vw 1vw 1vw 1vw rgba(0, 0, 0, .3);
-}
-.tags *{
-    max-width: 30vw;
-    display: flex;
-    flex-direction: row;
-}
-.quad, .mountain{
-    border-radius: 10px;
-    border: 1px solid black;
-    width: fit-content;
-    padding: 0.5vw;
-    height: 3vw;
-}
-.quad *, .mountain *{
-    width: 3vw;
-    vertical-align: middle;
 }
  .toPreview *{
     max-width: 100%;
@@ -300,4 +333,75 @@ body{
     width: 80vw;
     height: 60vw;
     border-radius: 3vw;
+}
+.roomButtonsAndRoom{
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+}
+.roomButtonBack, .roomButtonNext{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 4vw;
+    border: none;
+    font-size: calc(8px + 1vw);
+    text-align: center;
+    margin: auto;
+}
+.roomList{
+    margin-top: 3vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+.room {
+    font-size: calc(8px + 1vw);
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 1vw;
+    max-width: 25vw;
+    border-radius: 1vw;
+}
+.apartamentHeader{
+    text-decoration: underline;
+    font-size: (12px + 1vw);
+    color: rgb(17, 129, 86);
+}
+.room p img{
+    margin-left: 0.1vw;
+    width: 3vw;
+    height: auto;
+    vertical-align: middle;
+}
+
+.tagList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.tagList div{
+    margin-left: 0.3vw;
+    display: block;
+    border:  thin solid black;
+    width: fit-content;
+    border-radius: 1vw;
+    padding: 0.33vw;
+    font-size: calc(8px + 0.5vw);
+    margin-top: 0.3vw;
+}
+.tagList div img{
+    width: 1.5vw;
+    vertical-align: middle;
+}
+.apart1,
+.apart2,
+.apart3,
+.apart4,
+.apart5,
+.apart6,
+.apart7{
+    display: none;
 }
