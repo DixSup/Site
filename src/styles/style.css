@@ -389,6 +389,7 @@ body{
     padding: 0.33vw;
     font-size: calc(2px +  1vw);
     margin-top: 0.3vw;
+    
     white-space: nowrap;
 }
 .tagList div img{
