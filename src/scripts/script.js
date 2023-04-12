@@ -10,6 +10,8 @@ const contact = document.querySelector(".contactsLink");
 const about = document.querySelector(".aboutLink");
 const photo = document.querySelector(".photoLink");
 const room = document.querySelector(".roomLink");
+const price = document.querySelector(".priceLink");
+const discount = document.querySelector(".discountLink");
 
 
 const photoAsimage = document.querySelector(".photo1");
@@ -53,6 +55,22 @@ function setPhoto(){
 contact.addEventListener('click', () =>{
     let elem = document.querySelector(".contactsContainer");
     const y = elem.getBoundingClientRect().top - elem.getBoundingClientRect().height;
+    window.scroll({
+    top: y,
+    behavior: 'smooth'
+    });
+});
+price.addEventListener('click', () =>{
+    let elem = document.querySelector(".priceHeader");
+    const y = elem.getBoundingClientRect().top - elem.getBoundingClientRect().height - 40;
+    window.scroll({
+    top: y,
+    behavior: 'smooth'
+    });
+});
+discount.addEventListener('click', () =>{
+    let elem = document.querySelector(".discountHeader");
+    const y = elem.getBoundingClientRect().top - elem.getBoundingClientRect().height - 40;
     window.scroll({
     top: y,
     behavior: 'smooth'

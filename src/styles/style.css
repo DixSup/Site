@@ -94,6 +94,7 @@ body{
     max-height: 35vw;
     border-radius: 10px;
     vertical-align: middle;
+    margin: auto;
 }
 .textInfo{
     width: inherit;
@@ -140,15 +141,15 @@ body{
 .siteMenu *:hover{
     transform: scale(1.2);
 }
-.contactsContainer, .photoContainer, .aboutContainer, .roomContainer{
+.contactsContainer, .photoContainer, .aboutContainer, .roomContainer, .priceContainer , .discountContainer{
     display: flex;
     flex-direction: column;
     max-width: 90vw;
 }
-.contactsContainer div, .photoContainer div, .aboutContainer div, .roomContainer div{
+.contactsContainer div, .photoContainer div, .aboutContainer div, .roomContainer div , .priceContainer div{
     width: 100%;
 }
-.contactsHeader,.photoHeader, .aboutHeader,.roomHeader{
+.contactsHeader,.photoHeader, .aboutHeader,.roomHeader, .priceHeader, .discountHeader{
     margin-top: 1vw;
     text-align: center;
     background: rgb(7, 102, 131);
@@ -284,7 +285,7 @@ body{
     display: flex;
     flex-direction: row;
 }
-.aboutContainer,.roomContainer,.contactsContainer,.photoContainer{
+.aboutContainer,.roomContainer,.contactsContainer,.photoContainer, .priceContainer, .discountContainer{
     padding: 1vw;
 }
  .toPreview *{
@@ -410,3 +411,19 @@ body{
 .apart7{
     display: none;
 }
+.price, .discount{
+    display: flex;
+}
+.price img, .discount img {
+    margin: auto;
+    margin-top: 4vw;
+    width: 60vw;
+    height: auto;
+    border-radius: 1vw;
+    min-width: 30vw;
+    max-width: 65vw;
+}
+.price img:hover, .discount img:hover{
+    transform: scale(1.3);
+}
+
