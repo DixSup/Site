@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     apartament.classList="room";
     let apartament2 = document.querySelector('.room:nth-child(2)');
     apartament2.classList="room";
+
+    for(let i = 1; i < maxRoomNum + 1; i ++){
+        let apart = document.querySelector(".room:nth-child(" + i + ")");
+        apart.addEventListener('click',()=>{
+            Clicable(i);
+        });
+    }
 });
 
 window.addEventListener('scroll',()=>{
@@ -150,7 +157,6 @@ roomNextButton.addEventListener('click', () =>{
     apartamentToDisplay2.classList = "room"
     let apartamentToDisplay = document.querySelector('.room:nth-child(' + selectRoomNum +')');
     apartamentToDisplay.classList = "room";
-
     
 });
 
@@ -170,3 +176,101 @@ roomBackButton.addEventListener('click', ()=>{
     let apartamentToDisplay2 =  document.querySelector('.room:nth-child(' + secondSelectRoomNum +')');
     apartamentToDisplay2.classList = "room"
 });
+
+
+function Clicable(num){
+    document.body.style.overflowY = "hidden";
+    let moreInfoContainer = document.createElement('div');
+    document.body.appendChild(moreInfoContainer);
+    moreInfoContainer.classList = "moreRoomInfoContainer";
+
+    let buttonDivRoomMoreInfo = document.createElement('div');
+    buttonDivRoomMoreInfo.classList = "buttonRoomMoreInfoDiv";
+    moreInfoContainer.appendChild(buttonDivRoomMoreInfo);
+
+    let moreInfoContainerButton = document.createElement('input');
+    buttonDivRoomMoreInfo.appendChild(moreInfoContainerButton);
+    moreInfoContainerButton.setAttribute('type','button');
+    moreInfoContainerButton.value = "\u{274C}";
+
+    moreInfoContainerButton.addEventListener('click', ()=>{
+        document.body.style.overflowY = "visible";
+        document.body.removeChild(moreInfoContainer);
+    });
+
+    let roomMoreInfoHeader = document.createElement('div');
+    roomMoreInfoHeader.classList = "roomMoreInfoHeader";
+    moreInfoContainer.appendChild(roomMoreInfoHeader);
+
+    let roomHeader = document.querySelector('.room:nth-child(' + num +') .apartamentHeader');
+    roomMoreInfoHeader.appendChild( roomHeader.cloneNode(true));
+    
+
+    let imageAndButtondivRoom = document.createElement('div');
+    imageAndButtondivRoom.classList = "imageAndButtondivRoom";
+    moreInfoContainer.appendChild(imageAndButtondivRoom);
+
+    let roomMoreInfoPrev = document.createElement('input');
+    roomMoreInfoPrev.setAttribute('type','button');
+    imageAndButtondivRoom.appendChild(roomMoreInfoPrev);
+
+    let roomMoreInfoImage = document.createElement('img');
+    roomMoreInfoImage.src = "./src/images/Rooms/" + num + "/1.jpeg";
+    imageAndButtondivRoom.appendChild(roomMoreInfoImage);
+    roomMoreInfoPrev.value = "\u{2B9C}"
+
+
+    let roomMoreInfoNext = document.createElement('input');
+    roomMoreInfoNext.setAttribute('type','button');
+    imageAndButtondivRoom.appendChild(roomMoreInfoNext);
+    roomMoreInfoNext.value = "\u{2B9E}"
+
+    let roomMoreInfoMax;
+    let selectedRoomMoreInfo = 1;
+    roomMoreInfoNext.addEventListener('click', ()=>{
+        if(num == 1 || num == 4) roomMoreInfoMax = 3;
+        else roomMoreInfoMax = 4;
+
+        selectedRoomMoreInfo++;
+        if(selectedRoomMoreInfo > roomMoreInfoMax) selectedRoomMoreInfo = 1;
+
+        roomMoreInfoImage.src = "./src/images/Rooms/" + num + "/" + selectedRoomMoreInfo + ".jpeg";
+    });
+
+    roomMoreInfoPrev.addEventListener('click', ()=>{
+        if(num == 1 || num == 4) roomMoreInfoMax = 3;
+        else roomMoreInfoMax = 4;
+
+        selectedRoomMoreInfo--;
+        if(selectedRoomMoreInfo < 1) selectedRoomMoreInfo = roomMoreInfoMax;
+
+        roomMoreInfoImage.src = "./src/images/Rooms/" + num + "/" + selectedRoomMoreInfo + ".jpeg";
+    });
+}
+
+const discountImage = document.querySelector('.discount img');
+
+/*discountImage.addEventListener('click',()=>{
+    document.body.style.overflowY = "hidden";
+
+    let generalPhotoContainer = document.createElement('div');
+    document.body.appendChild(generalPhotoContainer);
+    generalPhotoContainer.classList = "generalPhotoContainer";
+
+    let buttonDivGeneral = document.createElement('div');
+    buttonDivGeneral.classList = "buttonGeneralDiv";
+    generalPhotoContainer.appendChild(buttonDivGeneral);
+
+    let generalButtonGeneral = document.createElement('input');
+    buttonDivGeneral.appendChild(generalButtonGeneral);
+    generalButtonGeneral.setAttribute('type','button');
+    generalButtonGeneral.value = "\u{274C}";
+
+    generalButtonGeneral.addEventListener('click', ()=>{
+        document.body.style.overflowY = "visible";
+        document.body.removeChild(generalPhotoContainer);
+    });
+    let imageDiscount = document.querySelector('.discount img');
+    let img = imageDiscount.cloneNode(true);
+    generalPhotoContainer.appendChild(img);
+});*/
