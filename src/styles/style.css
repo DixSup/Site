@@ -377,6 +377,8 @@ body{
     max-width: 30vw;
     border-radius: 1vw;
     min-width: 25vw;
+    height: 25vw;
+    overflow-y: scroll;
 }
 .apartamentHeader{
     text-decoration: underline;
